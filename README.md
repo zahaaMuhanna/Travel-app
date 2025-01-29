@@ -42,4 +42,70 @@ The Travel App allows users to enter a destination and departure date, and it re
 6- **Access the Application** Open your browser and go to:
    ```bash
    http://localhost:8082
+   ```
+
+## API Credentials
+
+### APIs Used
+
+#### Geonames API
+- **Purpose:** Provides geographical coordinates (latitude and longitude) for the destination.
+- **Documentation:** [Geonames API Documentation](http://www.geonames.org/export/web-services.html)
+
+#### Weatherbit API
+- **Purpose:** Fetches weather forecasts for the specified location and date.
+- **Documentation:** [Weatherbit API Documentation](https://www.weatherbit.io/api)
+
+#### Pixabay API
+- **Purpose:** Supplies destination-related images.
+- **Documentation:** [Pixabay API Documentation](https://pixabay.com/api/docs/)
+
+---
+
+## Technologies Used
+
+### Frontend
+- **HTML5:** Semantic structure.
+- **SCSS:** Styling with variables, mixins, and responsive design.
+- **JavaScript (ES6):** Dynamic UI and API integrations.
+
+### Backend
+- **Node.js:** Server-side runtime.
+- **Express.js:** Lightweight server framework.
+
+### Build Tools
+- **Webpack:** Module bundler and asset management.
+- **Babel:** Transpiling modern JavaScript.
+
+---
+
+## Development Strategy
+
+### Phase 1: Project Setup
+- Initialize the project using `npm`.
+- Configure Webpack to handle SCSS, JavaScript, and asset bundling.
+
+### Phase 2: API Integration
+- Integrate **Geonames API** to fetch location data.
+- Integrate **Weatherbit API** to retrieve weather information.
+- Integrate **Pixabay API** to get images for destinations.
+
+### Phase 3: Frontend Development
+- Build a responsive UI using **HTML** and **SCSS**.
+- Dynamically update the UI with data retrieved from APIs.
+
+### Phase 4: Testing and Optimization
+- Test API responses for valid and invalid inputs.
+- Optimize Webpack configuration for production builds.
+
+### Phase 5: Deployment
+- Prepare the project for deployment by bundling assets and ensuring environment variables are handled securely.
+
+---
+
+## Features
+- Enter a destination and departure date.
+- Get weather information for the destination.
+- View destination-related images.
+- Responsive design for an enhanced user experience.
 
