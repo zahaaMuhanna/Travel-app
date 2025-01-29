@@ -27,14 +27,17 @@ The Travel App allows users to enter a destination and departure date, and it re
    GEONAMES_USER=YourGeonamesUsername
    WEATHERBIT_KEY=YourWeatherbitAPIKey
    PIXABAY_KEY=YourPixabayAPIKey
+   ```
 
 4- **Build the Project** Compile SCSS and bundle JavaScript using Webpack:
    ```bash
    npm run build
+   ```
 
 5- **Run the Development Server** Start the development server:
    ```bash
    npm start
+   ```
 
 6- **Access the Application** Open your browser and go to:
    ```bash
