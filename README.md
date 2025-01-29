@@ -17,3 +17,26 @@ The Travel App allows users to enter a destination and departure date, and it re
    ```bash
    git clone https://github.com/zahaaMuhanna/Travel-app.git
    cd Travel-app
+
+2. **Install Dependencies** Install all required Node.js dependencies:
+   ```bash
+   npm install
+
+3- **Set Up API Credentials** Create a .env file in the root directory with the following content:
+   ```bash
+   GEONAMES_USER=YourGeonamesUsername
+   WEATHERBIT_KEY=YourWeatherbitAPIKey
+   PIXABAY_KEY=YourPixabayAPIKey
+
+4- **Build the Project** Compile SCSS and bundle JavaScript using Webpack:
+   ```bash
+   npm run build
+
+5- **Run the Development Server** Start the development server:
+   ```bash
+   npm start
+
+6- **Access the Application** Open your browser and go to:
+   ```bash
+   http://localhost:8082
+
