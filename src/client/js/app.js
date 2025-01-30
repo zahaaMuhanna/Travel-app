@@ -1,3 +1,4 @@
+
 import { handleSubmit } from "./handleSubmit.js";
 
 document.getElementById("travel-form").addEventListener("submit", handleSubmit);
@@ -11,3 +12,4 @@ if ("serviceWorker" in navigator) {
       .catch((err) => console.log("Service Worker Registration Failed: ", err));
   });
 }
+
