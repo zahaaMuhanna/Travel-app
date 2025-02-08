@@ -1,5 +1,6 @@
 
 import { handleSubmit } from "./handleSubmit.js";
+import '../styles/main.css';
 
 document.getElementById("travel-form").addEventListener("submit", handleSubmit);
 

@@ -2,7 +2,6 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-// Add the Workbox plugin for service worker
 const { GenerateSW } = require("workbox-webpack-plugin");
 
 module.exports = {
@@ -20,8 +19,12 @@ module.exports = {
         loader: "babel-loader",
       },
       {
-        test: /\.scss$/,
+        test: /\.scss$/, // For SCSS files
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.css$/, // For CSS files
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
       },
     ],
   },
@@ -32,32 +35,31 @@ module.exports = {
       filename: "index.html",
     }),
     new MiniCssExtractPlugin({
-      filename: "styles/main.css",
+      filename: "styles/main.css", // Ensure this matches your desired output path
     }),
-    // Workbox GenerateSW plugin for service worker
     new GenerateSW({
-      clientsClaim: true, // Activate the new service worker as soon as it’s installed
-      skipWaiting: true, // Skip waiting and activate the new service worker immediately
+      clientsClaim: true,
+      skipWaiting: true,
       runtimeCaching: [
         {
-          urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/, // Cache image assets
-          handler: "CacheFirst", // Use cached assets first for images
+          urlPattern: /\.(?:png|jpg|jpeg|svg|gif)$/,
+          handler: "CacheFirst",
           options: {
             cacheName: "images",
             expiration: {
-              maxEntries: 50, // Maximum number of images to cache
-              maxAgeSeconds: 30 * 24 * 60 * 60, // Cache for 30 days
+              maxEntries: 50,
+              maxAgeSeconds: 30 * 24 * 60 * 60,
             },
           },
         },
         {
-          urlPattern: new RegExp("https://(api.geonames.org|api.weatherbit.io|pixabay.com)"), // Cache API calls
-          handler: "NetworkFirst", // Try network first, fallback to cache
+          urlPattern: new RegExp("https://(api.geonames.org|api.weatherbit.io|pixabay.com)"),
+          handler: "NetworkFirst",
           options: {
             cacheName: "api-calls",
             expiration: {
-              maxEntries: 20, // Maximum number of API calls to cache
-              maxAgeSeconds: 7 * 24 * 60 * 60, // Cache for 7 days
+              maxEntries: 20,
+              maxAgeSeconds: 7 * 24 * 60 * 60,
             },
           },
         },

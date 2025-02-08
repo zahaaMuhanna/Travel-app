@@ -4,7 +4,7 @@ export async function handleSubmit(event) {
     const destination = document.getElementById("destination").value;
     const date = document.getElementById("departure-date").value;
 
-    const response = await fetch("http://localhost:8081/addTrip", {
+    const response = await fetch("http://localhost:8080/addTrip", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ destination, date }),
