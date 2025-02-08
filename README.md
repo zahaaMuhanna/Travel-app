@@ -41,7 +41,7 @@ The Travel App allows users to enter a destination and departure date, and it re
 
 6- **Access the Application** Open your browser and go to:
    ```bash
-   http://localhost:8082
+   http://localhost:8080
    ```
 
 ## API Credentials
