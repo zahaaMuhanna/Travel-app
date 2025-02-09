@@ -10,7 +10,7 @@ The Travel App allows users to enter a destination and departure date, and it re
 
 ### Prerequisites
 - Node.js and npm installed on your machine.
-- Git installed for version control.## Prerequisites
+- Git installed for version control.
 - Node.js v20.x
 
 ### Steps to Set Up the Project
