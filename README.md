@@ -10,7 +10,8 @@ The Travel App allows users to enter a destination and departure date, and it re
 
 ### Prerequisites
 - Node.js and npm installed on your machine.
-- Git installed for version control.
+- Git installed for version control.## Prerequisites
+- Node.js v20.x
 
 ### Steps to Set Up the Project
 1. **Clone the Repository**
@@ -43,6 +44,7 @@ The Travel App allows users to enter a destination and departure date, and it re
    ```bash
    http://localhost:8080
    ```
+
 
 ## API Credentials
 
